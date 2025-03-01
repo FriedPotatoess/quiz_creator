@@ -103,7 +103,7 @@ class Pipe(pygame.sprite.Sprite):
         pygame.sprite.Sprite.__init__(self)
         self.image = pygame.image.load('Assets/pipe.png')
         self.rect = self.image.get_rect()
-        # position 1 is from the top, -1 is from the bottom
+        #Position 1 = Top, Position -1 = Bottom
         if position == 1:
             self.image = pygame.transform.flip(self.image, False, True)
             self.rect.bottomleft = [x, y - int(pipe_gap / 2)]
