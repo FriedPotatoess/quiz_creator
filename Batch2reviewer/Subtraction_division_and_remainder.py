@@ -4,7 +4,7 @@
 print("Input two numbers")
 
 num1 = float(input(""))
-num2 = float(input(""))
+num2 = float(input(""))AS
 
 operation = input("Choose an operation\n1:Subtraction\n2:Division\n3:Print the remainder\n:")
 difference = num1 - num2
