@@ -1,12 +1,15 @@
+#Create a function to input to numbers √
+#Create the operations needed √
+
 print("Input two numbers")
 
-firstinp = float(input(""))
-secondinp = float(input(""))
+num1 = float(input(""))
+num2 = float(input(""))
 
 operation = input("Choose an operation\n1:Subtraction\n2:Division\n3:Print the remainder\n:")
-difference = firstinp - secondinp
-qoutient = firstinp / secondinp
-remainder = firstinp % secondinp
+difference = num1 - num2
+qoutient = num1 / num2
+remainder = num1 % num2
 
 if operation == '1':
     print (difference)

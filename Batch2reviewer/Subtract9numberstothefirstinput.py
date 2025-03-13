@@ -1,5 +1,5 @@
 #Create a list √
-#Create the function to subtract all  √
+#Create the function to subtract all subsequent number after the first input √
 
 numbers = []
 
