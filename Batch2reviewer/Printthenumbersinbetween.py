@@ -1,3 +1,6 @@
+#Ask user to input two numbers √
+#Create a function to print the numbers between the inputted numbers √
+
 print("Input 2 numbers:")
 
 num1 = int(input())
