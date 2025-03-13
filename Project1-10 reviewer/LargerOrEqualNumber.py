@@ -1,5 +1,5 @@
 #Create a function that takes the input of the user
-#Create a function that decides who is larger and if the numbers are Eq
+#Create a function that decides who is larger and if the numbers are Equal
 
 #ANTI STRING INPUT
 def Nostringinput(prompt):
