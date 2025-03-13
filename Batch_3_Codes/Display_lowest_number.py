@@ -1,4 +1,4 @@
-# Create a program that ask user to input a number, continue asking until the user input is invalid. Display the lowest number
+#GOALS: Create a program that ask user to input a number, continue asking until the user input is invalid. Display the lowest number
 #Place to store the inputed numbers and the code to ask for the user to input numbers √
 #Function to track the input numbers until it is invalid, then print the lowest input √
 
@@ -22,7 +22,7 @@ while True:
     except ValueError:
         if numbers:
             lowest_number = min(numbers)
-            print(f"The lowest number inputted is {lowest_number}")
+            print(f"Program terminating. The lowest number inputted is {lowest_number}")
         else:
             print("No valid numbers were entered")
         break
