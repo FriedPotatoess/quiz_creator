@@ -1,6 +1,6 @@
 #Create a function that takes the input of the user
 #Create a list for the numbers
-#Create a function to output only Odd numbers
+#Create a function to output how many odd numbers are inputted
 
 
 numbers = []
