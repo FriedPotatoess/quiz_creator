@@ -12,7 +12,12 @@ while True:
     
     try:
         num = float(user_input)
-    if highest_number is None or user_input > highest_number:
-        highest_number = user_input
+        if highest_number is None or user_input > highest_number:
+            highest_number = user_input
     except ValueError:
         print("Invalid input, terminating program")
+        break
+    
+
+#Prints the highest number √
+print(f"The highest number is: {highest_number}")   
