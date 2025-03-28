@@ -2,3 +2,5 @@
 
 #Get the user input
 user_input = input("Please input your Full name: ")
+#Print all capslocked
+print(user_input.upper())
