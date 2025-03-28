@@ -2,3 +2,5 @@
 
 #Get the user input
 user_input = input("Please input your Full name: ")
+#Print lowercased input
+print(user_input.lower())
