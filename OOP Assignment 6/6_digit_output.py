@@ -2,4 +2,7 @@
 #Create a fucntion to get the user input √
 #Create a fucntion to make the output 6 digits 
 
+#Get the user input
 user_input = int(input("Please input your digits: "))
+#Make the output 6 digits 
+print(f"{user_input:06d}")
