@@ -2,3 +2,5 @@
 
 #Get the user input
 user_input = input("Please input your Full name: ")
+#Output propercased input
+print(user_input.title())
