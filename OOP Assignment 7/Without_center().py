@@ -1,5 +1,7 @@
 #Create a program that do the same functionality without using center() function.
-def custom_center(user_input, width):
+
+#Definition for custom center function
+def center(user_input, width):
     # Calculate how many spaces to add
     total_padding = width - len(user_input)
 
@@ -15,6 +17,5 @@ def custom_center(user_input, width):
 user_input = input("Please enter what you wanna enter: ")
 width = int(input("Enter the width, which i will center the text you put: "))
 
-
-
+#Outputs the centered text
 print(f"'{custom_center(user_input, width)}'")
