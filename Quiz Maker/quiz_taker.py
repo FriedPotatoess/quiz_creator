@@ -20,3 +20,8 @@ def init_quiz(filename):
                 for option in ['A', 'B', 'C', 'D']:
                     option_line = file.readline().strip()
                     options[option] = option_line.split(":", 1)[1].strip()
+                    
+                correct_answer = file.readline().strip()
+                correct_letter = correct_line.split(":", 1)[1].strip().upper()
+
+             
