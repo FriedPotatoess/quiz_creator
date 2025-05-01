@@ -4,11 +4,11 @@
 #2. Probably randomize the question and place a score and correct answer at the start
 #3. Beautify
 
-
+#Loads the quiz
 def init_quiz(filename):
     questions = []
     try:
-        with open(filename, r) as file:
+        with open(filename, r) as file: #Opens the file
             while True:
                 question_line=file.readline()
                 if not question_line:
@@ -23,5 +23,12 @@ def init_quiz(filename):
                     
                 correct_answer = file.readline().strip()
                 correct_letter = correct_line.split(":", 1)[1].strip().upper()
-
-             
+                
+                #Compile the questions options and answer
+                questions.append((question, options, correct_letter))
+                file.readline()
+    
+    #Error if file test is not found
+    except FileNotFoundError:
+        print(f"File '{filename}' not found.")
+        
