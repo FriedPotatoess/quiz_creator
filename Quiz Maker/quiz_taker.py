@@ -44,4 +44,11 @@ def quiz_runner(questions):
             print(f" {option}: {answer}")
             
 
-            
+if __name__ == "__main__":
+    filename = input("Enter the name of the quiz file (with .txt): ").strip()
+    questions = init_quiz(filename)
+    if questions:
+        quiz_runner(questions)
+    else:
+        print("No questions found or quiz file is invalid.")
+        
