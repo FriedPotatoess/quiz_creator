@@ -5,6 +5,7 @@
 #3. Beautify
 
 import os
+import random
 
 #Loads the quiz
 def init_quiz(filename):
@@ -39,9 +40,12 @@ def init_quiz(filename):
 def quiz_runner(questions):
     score = 0
     user_answers = []
-        
+    random.shuffle(questions) #Randomize question positions
+    
+    
+    
     for test, (question, options, correct_answer) in enumerate(questions, 1):
-        print(f"\nQuestion{test}: {question}")
+        print(f"\nQuestion {test}: {question}")
         for option, answer in options.items():
             print(f" {option}: {answer}")
             
@@ -62,7 +66,7 @@ def quiz_runner(questions):
     print(f"\nScore: {score}/{len(questions)}")
     
     
-    
+#Runs the code 
 if __name__ == "__main__":
     print("Available quiz files:")
     for file in os.listdir():
