@@ -38,7 +38,7 @@ def quiz_runner(questions):
     score = 0
     user_answers = []
         
-    for test, (question, options, correct) in enumerate(questions, 1):
+    for test, (question, options, correct_answer) in enumerate(questions, 1):
         print(f"\nQuestion{test}: {question}")
         for option, answer in options.items():
             print(f" {option}: {answer}")
@@ -49,3 +49,10 @@ def quiz_runner(questions):
             if user_answer in ['A' , 'B' , 'C' , 'D']:
                 break
             print("Please input a valid answer")
+        #Scores stuff
+        is_correct = (user_answer == correct_answer)
+        if is_correct:
+            score += 1
+        
+        user_answers.append((question, options, user_answer, correct, is_correct))
+        
