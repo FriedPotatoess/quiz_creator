@@ -31,4 +31,9 @@ def init_quiz(filename):
     #Error if file test is not found
     except FileNotFoundError:
         print(f"File '{filename}' not found.")
+
+#Quiz Runner
+def quiz_runner(questions):
+    score = 0
+    user_answers []
         
