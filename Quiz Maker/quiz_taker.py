@@ -78,7 +78,7 @@ if __name__ == "__main__":
     print("Available quiz files:")
     for file in os.listdir():
         if file.endswith(".txt"):
-            print(" -", file)
+            print(os.path.splitext(file)[0])#Removes txt in the display
 
     #Input the quiz name even though without txt
     filename = input("\nEnter the name of the quiz: ").strip()
