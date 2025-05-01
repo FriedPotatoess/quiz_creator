@@ -4,6 +4,8 @@
 #2. Probably randomize the question and place a score and correct answer at the start
 #3. Beautify
 
+import os
+
 #Loads the quiz
 def init_quiz(filename):
     components = []
@@ -54,5 +56,24 @@ def quiz_runner(questions):
         if is_correct:
             score += 1
         
-        user_answers.append((question, options, user_answer, correct, is_correct))
+        user_answers.append((question, options, user_answer, correct_answer, is_correct))
         
+        #Final Score
+    print(f"\nScore: {score}/{len(questions)}")
+    
+    
+    
+if __name__ == "__main__":
+    print("Available quiz files:")
+    for file in os.listdir():
+        if file.endswith(".txt"):
+            print(" -", file)
+
+    filename = input("\nEnter the name of the quiz file (with .txt): ").strip()
+    questions = init_quiz(filename)
+    if questions:
+        quiz_runner(questions)
+    else:
+        print("No questions found or quiz file is invalid.")        
+    
+    
