@@ -42,8 +42,6 @@ def quiz_runner(questions):
     user_answers = []
     random.shuffle(questions) #Randomize question positions
     
-    
-    
     for test, (question, options, correct_answer) in enumerate(questions, 1):
         print(f"\nQuestion {test}: {question}")
         for option, answer in options.items():
@@ -51,7 +49,7 @@ def quiz_runner(questions):
             
         #Input from the user, also a prevention for an unwarranted answers like numbers
         while True:
-            user_answer = input("Your answer: ")
+            user_answer = input("Your answer: ").upper()
             if user_answer in ['A' , 'B' , 'C' , 'D']:
                 break
             print("Please input a valid answer")
@@ -62,9 +60,18 @@ def quiz_runner(questions):
         
         user_answers.append((question, options, user_answer, correct_answer, is_correct))
         
-        #Final Score
+    #Final Score
     print(f"\nScore: {score}/{len(questions)}")
-    
+    #Reviewer
+    print("Review")
+    for review, (question, options, user_answer, correct_answer, is_correct) in enumerate(user_answers, 1):
+        print(f"\nQuestion {review}: {question}")
+        for option, answer in options.items():
+            print(f"  {option}: {answer}")
+        
+        print(f"Your answer: {user_answer} - {'Correct!' if is_correct else f'Incorrect. Correct answer: {correct_answer}'}")
+
+        
     
 #Runs the code 
 if __name__ == "__main__":
