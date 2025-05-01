@@ -6,9 +6,9 @@
 
 #Loads the quiz
 def init_quiz(filename):
-    questions = []
+    components = []
     try:
-        with open(filename, r) as file: #Opens the file
+        with open(filename, 'r') as file: #Opens the file
             while True:
                 question_line=file.readline()
                 if not question_line:
@@ -22,18 +22,26 @@ def init_quiz(filename):
                     options[option] = option_line.split(":", 1)[1].strip()
                     
                 correct_answer = file.readline().strip()
-                correct_letter = correct_line.split(":", 1)[1].strip().upper()
+                correct_letter = correct_answer.split(":", 1)[1].strip().upper()
                 
                 #Compile the questions options and answer
-                questions.append((question, options, correct_letter))
+                components.append((question, options, correct_letter))
                 file.readline()
     
     #Error if file test is not found
     except FileNotFoundError:
         print(f"File '{filename}' not found.")
+    return components
 
 #Quiz Runner
 def quiz_runner(questions):
     score = 0
-    user_answers []
+    user_answers = []
         
+    for test, (question, options, correct) in enumerate(questions, 1):
+        print(f"\nQuestion{test}: {question}")
+        for option, answer in options.items():
+            print(f" {option}: {answer}")
+            
+
+            
