@@ -43,12 +43,9 @@ def quiz_runner(questions):
         for option, answer in options.items():
             print(f" {option}: {answer}")
             
-
-if __name__ == "__main__":
-    filename = input("Enter the name of the quiz file (with .txt): ").strip()
-    questions = init_quiz(filename)
-    if questions:
-        quiz_runner(questions)
-    else:
-        print("No questions found or quiz file is invalid.")
-        
+        #Input from the user, also a prevention for an unwarranted answers like numbers
+        while True:
+            user_answer = input("Your answer: ")
+            if user_answer in ['A' , 'B' , 'C' , 'D']:
+                break
+            print("Please input a valid answer")
