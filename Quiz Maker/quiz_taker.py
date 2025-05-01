@@ -69,7 +69,10 @@ if __name__ == "__main__":
         if file.endswith(".txt"):
             print(" -", file)
 
-    filename = input("\nEnter the name of the quiz file (with .txt): ").strip()
+    #Input the quiz name even though without txt
+    filename = input("\nEnter the name of the quiz: ").strip()
+    if not filename.endswith(".txt"):
+        filename += ".txt"
     questions = init_quiz(filename)
     if questions:
         quiz_runner(questions)
